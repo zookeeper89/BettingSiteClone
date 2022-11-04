@@ -4,6 +4,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import ChangeLang from "components/Modals/ChangeLang";
 
+
 const user = {
   name: "Chelsea Hagon",
   email: "chelsea.hagon@example.com",
@@ -49,7 +50,7 @@ export default function Navbar() {
                     <a href="#">
                       <img
                         className="block h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=green&shade=600"
+                        src="/sommerlogo.png"
                         alt="Your Company"
                       />
                     </a>

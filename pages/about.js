@@ -2,19 +2,18 @@ import Navbar from "components/Menu/Navbar";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "styles/Home.module.css";
-import Link from "next/link";
 
 import en from "locales/en";
 import da from "locales/da";
 import de from "locales/de";
 import { useRouter } from "next/router";
 
-export default function Home() {
-  //Skift sprog i18n
-  const router = useRouter();
-  const { locale } = router;
-  const t =
-    locale === "da" ? da : locale === "de" ? de : locale === "en" ? en : "";
+export default function About() {
+   //Skift sprog i18n
+   const router = useRouter();
+   const { locale } = router;
+   const t = 
+   locale === "da" ? da : locale === "de" ? de : locale === "en" ? en: "";
 
   return (
     <div>
@@ -26,9 +25,7 @@ export default function Home() {
 
       <Navbar />
       <div>
-        <Link href="/about">
-          asds
-        </Link>
+
         {t.test}
       </div>
     </div>

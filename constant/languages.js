@@ -1,21 +1,5 @@
 export const languages = [
-  { name: "Dansk", icon: "https://unpkg.com/language-icons/icons/da.svg" },
-  { name: "English", icon: "https://unpkg.com/language-icons/icons/en.svg" },
-  { name: "German", icon: "https://unpkg.com/language-icons/icons/de.svg" },
+  { icon: "https://unpkg.com/language-icons/icons/da.svg", value: "da" },
+  { icon: "https://unpkg.com/language-icons/icons/en.svg", value: "en" },
+  { icon: "https://unpkg.com/language-icons/icons/de.svg", value: "de" },
 ];
-
-export const translate = {
-  en: {
-    changeLang: {
-        chooseLang: 'Choose language'
-    }
-  },
-  en: {
-    changeLang: {
-        chooseLang: 'Vælg sprog'
-    }
-  },
-  de: {
-
-  }
-};
