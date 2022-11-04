@@ -1,7 +1,8 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Menu, Popover, Transition } from "@headlessui/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import ChangeLang from "components/Modals/ChangeLang";
 
 const user = {
   name: "Chelsea Hagon",
@@ -25,7 +26,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Navbar() {
+  const [opened, setOpened] = useState(false);
   return (
     <>
       {/* When the mobile menu is open, add `overflow-hidden` to the `body` element to prevent double scrollbars */}
@@ -90,10 +92,9 @@ export default function Example() {
                 </div>
                 <div className="hidden lg:flex lg:items-center lg:justify-end xl:col-span-4">
                   <a
-                    href="#"
-                    className="ml-5 flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                    onClick={() => setOpened(true)}
+                    className="hover:cursor-pointer ml-5 flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
-                    <span className="sr-only">Vælg sprog</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -219,6 +220,7 @@ export default function Example() {
           </>
         )}
       </Popover>
+      <ChangeLang opened={opened} setOpened={setOpened} />
     </>
   );
 }
