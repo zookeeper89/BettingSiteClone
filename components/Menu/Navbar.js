@@ -3,6 +3,7 @@ import { Menu, Popover, Transition } from "@headlessui/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import ChangeLang from "components/Modals/ChangeLang";
+import { settings } from "constant/settings";
 
 const user = {
   name: "Chelsea Hagon",
@@ -46,12 +47,13 @@ export default function Navbar() {
               <div className="relative flex justify-between lg:gap-8 xl:grid xl:grid-cols-12">
                 <div className="flex md:absolute md:inset-y-0 md:left-0 lg:static xl:col-span-2">
                   <div className="flex flex-shrink-0 items-center">
-                    <a href="#">
+                    <a href="#" className="flex justify-start">
                       <img
-                        className="block h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=green&shade=600"
+                        className="block h-6 w-auto mr-3"
+                        src="/Design_uden_navn-3-removebg-preview.png"
                         alt="Your Company"
                       />
+                      <p className="font-semibold">{settings.businessName}</p>
                     </a>
                   </div>
                 </div>
