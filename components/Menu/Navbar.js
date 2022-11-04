@@ -53,7 +53,7 @@ export default function Navbar() {
                         src="/Design_uden_navn-3-removebg-preview.png"
                         alt="Your Company"
                       />
-                      <p className="font-semibold">{settings.businessName}</p>
+                      <p className="font-semibold ">{settings.businessName}</p>
                     </a>
                   </div>
                 </div>
