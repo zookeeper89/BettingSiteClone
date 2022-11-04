@@ -51,7 +51,7 @@ export default function Navbar() {
                     <a href="#" className="flex justify-start">
                       <img
                         className="block h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=green&shade=600"
+                        src="/sommerlogo.png"
                         alt="Your Company"
                       />
                       <p className="font-semibold ">{settings.businessName}</p>
