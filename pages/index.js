@@ -9,6 +9,8 @@ import da from "locales/da";
 import de from "locales/de";
 import { useRouter } from "next/router";
 import Footer from "components/Menu/Footer";
+import TopHero from "components/Hero/TopHero";
+import CityFeatures from "components/SecondaryFeatures/CityFeatures";
 
 export default function Home() {
   //Skift sprog i18n
@@ -26,13 +28,11 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <div>
-        <Link href="/about">
-          asds
-        </Link>
-        {t.test}
-      </div>
-      <Footer/>
+      <TopHero image="/hero.jpg" />
+
+      <CityFeatures />
+
+      <Footer />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Footer(props) {
   const [opened, setOpened] = useState(false);
   return (
-    <div className="invisible sm:visible fixed bottom-0 w-full">
+    <div className="invisible sm:visible w-full">
       <footer className=" shadow p-2 bg-white">
         <div className="sm:flex sm:items-center sm:justify-between">
           <ul className="flex flex-wrap items-center text-sm text-gray-400 space-x-2">
