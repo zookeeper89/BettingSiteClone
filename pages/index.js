@@ -8,6 +8,7 @@ import en from "locales/en";
 import da from "locales/da";
 import de from "locales/de";
 import { useRouter } from "next/router";
+import Footer from "components/Menu/Footer";
 
 export default function Home() {
   //Skift sprog i18n
@@ -31,6 +32,7 @@ export default function Home() {
         </Link>
         {t.test}
       </div>
+      <Footer/>
     </div>
   );
 }
