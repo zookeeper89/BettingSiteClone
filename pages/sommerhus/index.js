@@ -9,7 +9,11 @@ import de from "locales/de";
 import { useRouter } from "next/router";
 import Footer from "components/Menu/Footer";
 import StickyFooter from "components/Sommerhus/StickyFooter";
-import SommerhusGallery from "components/Sommerhus/SommerhusGallery"
+import SommerhusGallery from "components/Sommerhus/SommerhusGallery";
+import Top from "components/Sommerhus/Top";
+import Facilities from "components/Sommerhus/Facilities";
+import Description from "components/Sommerhus/Description";
+import Host from "components/Sommerhus/Host"
 
 export default function Sommerhus() {
   //Skift sprog i18n
@@ -27,11 +31,22 @@ export default function Sommerhus() {
       </Head>
 
       <Navbar />
-      <StickyFooter />
-      
+      <Top name="Andreas og Nalas sommerhus" />
+
       <SommerhusGallery />
-      
-      <Footer/>
+      <div className="border-t-2 border-green-300 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+        <Host />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 border-t-2 border-green-300 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="pr-0 md:pr-28 text-center md:text-left">
+          <Description />
+        </div>
+        <div className="pr-0 md:pr-28 text-center md:text-left">
+          <Facilities />
+        </div>
+      </div>
+      <StickyFooter />
+      <Footer />
     </div>
   );
 }
