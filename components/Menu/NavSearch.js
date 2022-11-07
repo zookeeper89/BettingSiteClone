@@ -97,6 +97,7 @@ export function NavbarSearch() {
             required: "bg-green-400",
           }}
           size="md"
+          clearable
           styles={(theme) => ({
             item: {
               // applies styles to selected item
