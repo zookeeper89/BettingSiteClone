@@ -57,7 +57,7 @@ export function NavbarSearch() {
         <Autocomplete
           placeholder={t.navbar.search}
           className="w-full"
-          classNames={{ icon: "p-2", input: "border-white rounded-lg focus:ring-offset-0" }}
+          classNames={{ icon: "p-2", input: "border-white rounded-lg focus:border-green-400 rounded-r-none" }}
           icon={<MagnifyingGlassIcon />}
           onChange={setQuery}
           data={
@@ -68,7 +68,7 @@ export function NavbarSearch() {
       <div className="w-2/6">
         <DateRangePicker
           placeholder="Pick dates range"
-          classNames={{ icon: "p-2", input: "border-white rounded-lg !focus:ring-green-400"}}
+          classNames={{ icon: "p-2", input: "border-white rounded-lg focus:border-green-400"}}
           value={value}
           onChange={setValue}
         />
@@ -76,7 +76,7 @@ export function NavbarSearch() {
       <div className="w-1/6">
         <Select
           placeholder="Personer"
-          classNames={{ icon: "p-2", input: "border-white rounded-lg !focus:ring-green-400" }}
+          classNames={{ icon: "p-2", input: "border-white rounded-lg focus:border-green-400" }}
           data={[
             { value: 1, label: "1 Person" },
             { value: 2, label: "2 Personer" },
