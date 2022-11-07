@@ -39,6 +39,7 @@
     "react-photo-gallery-next": "^8.0.1",
     "react-responsive-carousel": "^3.2.23",
     "react-spring-lightbox": "^1.7.1",
+    "swr": "^1.3.0",
     "use-router": "^0.4.2",
     "yet-another-react-lightbox": "^2.2.1"
   },

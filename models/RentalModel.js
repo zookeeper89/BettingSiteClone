@@ -7,11 +7,6 @@ const RentalSchema = new mongoose.Schema(
       required: false,
       trim: true,
     },
-    landlord: {
-      type: String,
-      required: false,
-      trim: true,
-    },
     price: {
       type: Number,
       required: false,
