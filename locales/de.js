@@ -2,7 +2,11 @@ export default {
     sprogmodalTitle: "Casd",
     sprogknapTitle: "jaja",
     navbar: {
-        search: 'Suche',
+        searchBar: {
+            search: 'Platz',
+            PickDateRange: 'Datum auswählen',
+            personer: 'Gäste',
+        }
     },
     test: "tysk"
 };

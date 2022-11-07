@@ -8,6 +8,7 @@ import de from "locales/de";
 import useSWR from "swr";
 import { useRouter } from "next/router";
 import { DateRangePicker, DateRangePickerValue } from "@mantine/dates";
+import dayjs from "dayjs";
 
 export function NavbarSearch() {
   const [query, setQuery] = useState("");
@@ -31,10 +32,13 @@ export function NavbarSearch() {
       : null
   );
 
-  const [value, setValue] = useState([
-    new Date(2021, 11, 1),
-    new Date(2021, 11, 5),
-  ]);
+  const today = new Date();
+  const tomorrow = new Date(today);
+  const InAWeek = new Date(today);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  InAWeek.setDate(InAWeek.getDate() + 7);
+
+  const [value, setValue] = useState([tomorrow, InAWeek]);
 
   const reformattedQuery = autocomplete?.map((item) => {
     return {
@@ -53,52 +57,104 @@ export function NavbarSearch() {
 
   return (
     <div className="flex justify-center border-green-600 rounded-lg border-2">
-      <div className="w-2/6">
+      <div className="w-4/12">
         <Autocomplete
-          placeholder={t.navbar.search}
+          placeholder={t.navbar.searchBar.search}
           className="w-full"
-          classNames={{ icon: "p-2", input: "border-white rounded-lg focus:border-green-400 rounded-r-none" }}
+          classNames={{
+            icon: "p-2",
+            input:
+              "border-white rounded-lg focus:border-green-400 rounded-r-none",
+          }}
           icon={<MagnifyingGlassIcon />}
           onChange={setQuery}
+          size="md"
           data={
             [...(reformattedKommuner ?? []), ...(reformattedQuery ?? [])] ?? []
           }
         />
       </div>
-      <div className="w-2/6">
+      <div className="w-4/12">
         <DateRangePicker
-          placeholder="Pick dates range"
-          classNames={{ icon: "p-2", input: "border-white rounded-lg focus:border-green-400"}}
+          placeholder={t.navbar.searchBar.PickDateRange}
+          classNames={{
+            icon: "p-2",
+            input: "border-white rounded-none focus:border-green-400",
+          }}
           value={value}
+          size="md"
           onChange={setValue}
+          inputFormat="DD MMM"
+          minDate={tomorrow}
         />
       </div>
-      <div className="w-1/6">
+      <div className="w-2/12">
         <Select
-          placeholder="Personer"
-          classNames={{ icon: "p-2", input: "border-white rounded-lg focus:border-green-400" }}
+          placeholder={t.navbar.searchBar.personer}
+          classNames={{
+            icon: "p-2",
+            input: "border-white rounded-none focus:border-green-400",
+            required: "bg-green-400",
+          }}
+          size="md"
+          styles={(theme) => ({
+            item: {
+              // applies styles to selected item
+              "&[data-selected]": {
+                "&, &:hover": {
+                  backgroundColor:
+                    theme.colorScheme === "dark"
+                      ? theme.colors.teal[9]
+                      : theme.colors.green[5],
+                  color:
+                    theme.colorScheme === "dark"
+                      ? theme.white
+                      : theme.colors.white,
+                },
+              },
+
+              // applies styles to hovered item (with mouse or keyboard)
+              "&[data-hovered]": {
+                "&, &:hover": {
+                  backgroundColor:
+                    theme.colorScheme === "dark"
+                      ? theme.colors.teal[9]
+                      : theme.colors.green[3],
+                  color:
+                    theme.colorScheme === "dark"
+                      ? theme.white
+                      : theme.colors.white,
+                },
+              },
+            },
+          })}
           data={[
-            { value: 1, label: "1 Person" },
-            { value: 2, label: "2 Personer" },
-            { value: 3, label: "3 Personer" },
-            { value: 4, label: "4 Personer" },
-            { value: 5, label: "5 Personer" },
-            { value: 6, label: "6 Personer" },
-            { value: 7, label: "7 Personer" },
-            { value: 8, label: "8 Personer" },
-            { value: 9, label: "9 Personer" },
-            { value: 10, label: "10 Personer" },
-            { value: 11, label: "11 Personer" },
-            { value: 12, label: "12 Personer" },
-            { value: 13, label: "13 Personer" },
-            { value: 14, label: "14 Personer" },
-            { value: 15, label: "15 Personer" },
-            { value: 16, label: "15+ Personer" },
+            { value: 1, label: "1" },
+            { value: 2, label: "2" },
+            { value: 3, label: "3" },
+            { value: 4, label: "4" },
+            { value: 5, label: "5" },
+            { value: 6, label: "6" },
+            { value: 7, label: "7" },
+            { value: 8, label: "8" },
+            { value: 9, label: "9" },
+            { value: 10, label: "10" },
+            { value: 11, label: "11" },
+            { value: 12, label: "12" },
+            { value: 13, label: "13" },
+            { value: 14, label: "14" },
+            { value: 15, label: "15" },
+            { value: 16, label: "15+" },
           ]}
         />
       </div>
-      <div className="w-1/6">
-        <Button className="w-full bg-green-600 hover:bg-green-500 rounded-none rounded-r-md">Søg</Button>
+      <div className="w-2/12">
+        <Button
+          className="w-full bg-green-600 hover:bg-green-500 rounded-none rounded-r-md"
+          size="md"
+        >
+          Søg
+        </Button>
       </div>
     </div>
   );

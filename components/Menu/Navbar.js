@@ -5,6 +5,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import ChangeLang from "components/Modals/ChangeLang";
 import { settings } from "constant/settings";
 import { NavbarSearch } from "./NavSearch";
+import { Button } from "@mantine/core";
 
 
 const user = {
@@ -136,12 +137,7 @@ export default function Navbar() {
                     </Transition>
                   </Menu>
 
-                  <a
-                    href="#"
-                    className="ml-6 inline-flex items-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-                  >
-                    Udlej sommerhus
-                  </a>
+                  <Button size="lg" className="ml-4 bg-green-600 rounded-md text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">Udlej sommerhus</Button>
                 </div>
               </div>
             </div>

@@ -2,7 +2,11 @@ export default {
     sprogmodalTitle: "Choose langauge",
     sprogknapTitle: "Choose",
     navbar: {
-        search: 'Search',
+        searchBar: {
+            search: 'Where',
+            PickDateRange: 'Pick dates',
+            personer: 'Guests',
+        }
     },
     test: "engelsk"
 };
