@@ -28,7 +28,7 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <TopHero image="/hero.jpg" />
+      <TopHero />
 
       <CityFeatures />
 
