@@ -58,6 +58,11 @@ const UserSchema = new mongoose.Schema({
         required: false,
         trim: true,
     },
+    role: {
+        type: String,
+        required: false,
+        trim: true,
+    }
 },{timestamps:true})
 
 export default mongoose.models.UserModel || mongoose.model("UserModel", UserSchema, "users");
