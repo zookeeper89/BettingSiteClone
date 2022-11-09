@@ -22,7 +22,6 @@ export default function DropdownLoggedIn(props) {
         <Menu.Target>
           <Button className="hover:bg-white">
             <Bars3Icon className="h-6 text-gray-600" />
-            <AcademicCapIcon className="h-6 text-gray-600" />
           </Button>
         </Menu.Target>
 

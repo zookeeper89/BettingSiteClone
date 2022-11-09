@@ -38,16 +38,22 @@ export default function Navbar(props) {
   console.log(user, "dahsd");
 
   return (
-    <header className={` ${props.className}`}>
-      <div className="relative items-center col-span-2 h-10 cursor-pointer my-auto hidden md:flex xl:flex">
+    <header className={`sticky top-0 z-50 grid grid-cols-6 bg-white border-b-0 md:border-b-2 xl:border-b-2 border-gray-200 p-4 px-10"`}>
+      <div className="relative items-center col-span-1 h-10 cursor-pointer my-auto hidden md:flex xl:flex">
         <Image src="/logosommerhus.png" width={40} height={40} alt="logo" />
       </div>
 
-      <div className="flex items-center rounded-full py-2 md:shadow-sm col-span-6 md:col-span-2 xl:col-span-2">
+      <div className="flex items-center rounded-full py-2 md:shadow-sm col-span-4 md:col-span-3 xl:col-span-3">
         <NavbarSearch />
       </div>
 
-      <div className="flex items-center space-x-4 justify-end text-gray-500 hidden md:flex xl:flex col-span-2">
+      <div className="flex items-center space-x-4 justify-end text-gray-500   md:flex xl:flex col-span-2">
+        <Button
+          size="lg"
+          className="ml-4 bg-green-600 rounded-md text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 invisible md:visible"
+        >
+          Udlej sommerhus
+        </Button>
         <button onClick={() => setOpenedLang(true)} className="hover:shadow-xl">
           <GlobeAltIcon className="h-6 cursor-pointer " />
         </button>
@@ -68,12 +74,6 @@ export default function Navbar(props) {
             }
           })()}
         </div>
-        <Button
-          size="lg"
-          className="ml-4 bg-green-600 rounded-md text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-        >
-          Udlej sommerhus
-        </Button>
         {/* <div className="flex items-center space-x-2 border-2 p-2 rounded-full transition ease-in-out hover:shadow-md cursor-pointer">
           <MenuIcon className="h-6" />
           <UserCircleIcon className="h-6" />

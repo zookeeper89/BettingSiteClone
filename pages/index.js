@@ -28,7 +28,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
      
-      <Navbar2 className="sticky top-0 z-50 grid grid-cols-6 bg-white border-b-0 md:border-b-2 xl:border-b-2 border-gray-200 p-4 px-10" />
+      <Navbar2 />
       <TopHero />
 
       <CityFeatures />

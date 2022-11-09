@@ -18,7 +18,6 @@ export default function Dropdown(props) {
       >
         <Menu.Target>
           <Button className="hover:bg-white">
-            <AcademicCapIcon className="h-6 text-gray-600"  />
             <Bars3Icon className="h-6 text-gray-600" />
           </Button>
         </Menu.Target>
@@ -27,8 +26,11 @@ export default function Dropdown(props) {
           <Menu.Item onClick={() => setCreateAccount(!createAccount)}>
             Tilmeld dig
           </Menu.Item>
+          
+          
           <Menu.Item onClick={() => setLoginbar(!loginbar)}>Log ind</Menu.Item>
           <Divider />
+          <Menu.Item>Udlej</Menu.Item>
           <Menu.Item>Hjælp</Menu.Item>
 
           {/* Other items ... */}
