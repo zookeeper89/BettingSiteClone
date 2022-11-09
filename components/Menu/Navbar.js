@@ -1,8 +1,9 @@
 import { Fragment, useState } from "react";
 import { Menu, Popover, Transition } from "@headlessui/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, BellIcon, XMarkIcon, AdjustmentsHorizontalIcon } from "@heroicons/react/24/outline";
 import ChangeLang from "components/Modals/ChangeLang";
+import Filter from "components/Modals/Filter";
 import { settings } from "constant/settings";
 import { NavbarSearch } from "./NavSearch";
 import { Button } from "@mantine/core";
@@ -32,6 +33,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [opened, setOpened] = useState(false);
+  const [openedFilter, setOpenedFilter] = useState(false);
   return (
     <>
       {/* When the mobile menu is open, add `overflow-hidden` to the `body` element to prevent double scrollbars */}
@@ -77,6 +79,12 @@ export default function Navbar() {
                   </Popover.Button>
                 </div>
                 <div className="hidden lg:flex lg:items-center lg:justify-end xl:col-span-4">
+                  <a
+                    onClick={() => setOpenedFilter(true)}
+                    className="hover:cursor-pointer ml-5 flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                  >
+                    <AdjustmentsHorizontalIcon height={28} width={28}/>
+                  </a>
                   <a
                     onClick={() => setOpened(true)}
                     className="hover:cursor-pointer ml-5 flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
@@ -202,6 +210,7 @@ export default function Navbar() {
         )}
       </Popover>
       <ChangeLang opened={opened} setOpened={setOpened} />
+      <Filter opened={openedFilter} setOpened={setOpenedFilter} />
     </>
   );
 }
