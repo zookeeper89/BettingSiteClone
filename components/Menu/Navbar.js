@@ -54,11 +54,11 @@ export default function Navbar() {
                   <div className="flex flex-shrink-0 items-center">
                     <a href="#" className="flex justify-start">
                       <img
-                        className="block h-8 w-auto"
-                        src="/sommerlogo.png"
-                        alt="Your Company"
+                        className="block h-16 mt-2 w-auto"
+                        src="/logosommerhus.png"
+                        alt="logo"
                       />
-                      <p className="font-semibold ">{settings.businessName}</p>
+                      {/* <h1 className="text-2xl text-center my-auto font-normal mr-2 ml-4">{settings.businessName}</h1> */}
                     </a>
                   </div>
                 </div>

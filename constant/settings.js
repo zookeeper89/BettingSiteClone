@@ -1,3 +1,3 @@
 export const settings = {
-    businessName: 'SetIt'
+    businessName: 'Sommer'
 }
