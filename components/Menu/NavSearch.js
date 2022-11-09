@@ -144,8 +144,7 @@ export function NavbarSearch() {
             { value: 12, label: "12" },
             { value: 13, label: "13" },
             { value: 14, label: "14" },
-            { value: 15, label: "15" },
-            { value: 16, label: "15+" },
+            { value: 15, label: "15+" },
           ]}
         />
       </div>
