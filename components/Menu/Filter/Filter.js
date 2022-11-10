@@ -14,14 +14,42 @@ export default function Filter(props) {
         <hr></hr>
 
         <div className="mt-5">
-          <h2 className="text-lg font-semibold">Pris</h2>
+          <h2 className="text-lg font-semibold">Pris pr. nat</h2>
           <RangeSlider
             mt="xl"
             styles={{ thumb: { borderWidth: 2, padding: 3 } }}
             color="green"
-            label={null}
-            defaultValue={[20, 60]}
+            defaultValue={[0, 5000]}
+            step={250}
+            showLabelOnHover
+            marks={[
+              { value: 0, label: "0 kr" },
+              { value: 5000, label: "+5000 kr" },
+            ]}
             thumbSize={26}
+            max={5000}
+            thumbChildren={[
+              <IconHeart size={16} key="1" />,
+              <IconHeartBroken size={16} key="2" />,
+            ]}
+          />
+        </div>
+        <div className="mt-10">
+          <hr></hr>
+          <h2 className="text-lg font-semibold mt-3">Pris pr. nat</h2>
+          <RangeSlider
+            mt="xl"
+            styles={{ thumb: { borderWidth: 2, padding: 3 } }}
+            color="green"
+            defaultValue={[0, 5000]}
+            step={250}
+            showLabelOnHover
+            marks={[
+              { value: 0, label: "0 kr" },
+              { value: 5000, label: "+5000 kr" },
+            ]}
+            thumbSize={26}
+            max={5000}
             thumbChildren={[
               <IconHeart size={16} key="1" />,
               <IconHeartBroken size={16} key="2" />,
