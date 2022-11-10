@@ -45,7 +45,7 @@ export default function Navbar(props) {
         <Image src="/logosommerhus.png" width={40} height={40} alt="logo" />
       </div>
 
-      <div className="flex items-center rounded-full py-2 md:shadow-sm col-span-4 md:col-span-3 xl:col-span-3">
+      <div className="col-span-4 md:col-span-3 xl:col-span-3">
         <NavbarSearch />
       </div>
 
@@ -64,13 +64,13 @@ export default function Navbar(props) {
           {(() => {
             if (user?._id == null) {
               return (
-                <div className="flex items-center space-x-2 border-2 p-2 rounded-full transition ease-in-out hover:shadow-md cursor-pointer">
+                <div className="flex items-center space-x-2 border-1 p-2 rounded-md transition ease-in-out hover:shadow-md cursor-pointer">
                   <Dropdown />
                 </div>
               );
             } else {
               return (
-                <div className="flex items-center space-x-2 border-2 p-2 rounded-full transition ease-in-out hover:shadow-md cursor-pointer">
+                <div className="flex items-center space-x-2 border-1 p-2 rounded-md transition ease-in-out hover:shadow-md cursor-pointer">
                   <DropdownLoggedIn />
                 </div>
               );

@@ -77,10 +77,10 @@ export function NavbarSearch() {
 
   return (
     <>
-      <div className="flex justify-center border-green-600 rounded-lg border-2">
+      <div className="flex justify-center border-green-600 rounded-lg border-2 h-full">
         <div className="w-2/12">
           <Button
-            className="w-full bg-green-600 hover:bg-green-500 rounded-none rounded-l-md flex"
+            className="w-full bg-green-600 hover:bg-green-500 rounded-none rounded-l-md flex h-full"
             size="md"
             onClick={() => setFilterOpen(true)}
           >
@@ -88,19 +88,19 @@ export function NavbarSearch() {
             <p className="ml-4">Filter</p>
           </Button>
         </div>
-        <div className="w-3/12">
+        <div className="w-3/12 h-full">
           <Autocomplete
             placeholder={t.navbar.searchBar.search}
-            className="w-full"
+            className="w-full  h-full"
             classNames={{
               icon: "p-3",
               input:
-                "border-white rounded-lg focus:border-green-400 rounded-r-none rounded-l-none",
+                "border-white rounded-lg focus:border-green-400 rounded-r-none rounded-l-none  h-full",
             }}
             onItemSubmit={(value) => form.setFieldValue("city", value)}
             icon={<MagnifyingGlassIcon />}
             onChange={setQuery}
-            size="md"
+            size="lg"
             data={
               [...(reformattedKommuner ?? []), ...(reformattedQuery ?? [])] ??
               []
@@ -115,7 +115,7 @@ export function NavbarSearch() {
               input: "border-white rounded-none focus:border-green-400",
             }}
             value={value}
-            size="md"
+            size="lg"
             onChange={setValue}
             inputFormat="DD MMM"
             minDate={tomorrow}
@@ -129,7 +129,7 @@ export function NavbarSearch() {
               input: "border-white rounded-none focus:border-green-400",
               required: "bg-green-400",
             }}
-            size="md"
+            size="lg"
             clearable
             styles={(theme) => ({
               item: {
@@ -184,7 +184,7 @@ export function NavbarSearch() {
         </div>
         <div className="w-2/12">
           <Button
-            className="w-full bg-green-600 hover:bg-green-500 rounded-none rounded-r-md"
+            className="w-full bg-green-600 hover:bg-green-500 rounded-none rounded-r-md h-full"
             size="md"
           >
             Søg
