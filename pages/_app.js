@@ -1,6 +1,6 @@
 import "styles/globals.css";
 import { SWRConfig } from "swr";
-import { SessionProvider } from "next-auth/react";
+import { SessionProvider } from "next-auth/react"
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (

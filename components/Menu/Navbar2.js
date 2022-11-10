@@ -38,7 +38,9 @@ export default function Navbar(props) {
   console.log(user, "dahsd");
 
   return (
-    <header className={`sticky top-0 z-50 grid grid-cols-6 bg-white border-b-0 md:border-b-2 xl:border-b-2 border-gray-200 p-4 px-10"`}>
+    <header
+      className={`sticky top-0 z-50 grid grid-cols-6 bg-white border-b-0 md:border-b-2 xl:border-b-2 border-gray-200 p-4 px-10`}
+    >
       <div className="relative items-center col-span-1 h-10 cursor-pointer my-auto hidden md:flex xl:flex">
         <Image src="/logosommerhus.png" width={40} height={40} alt="logo" />
       </div>
@@ -48,15 +50,16 @@ export default function Navbar(props) {
       </div>
 
       <div className="flex items-center space-x-4 justify-end text-gray-500   md:flex xl:flex col-span-2">
+        <button onClick={() => setOpenedLang(true)} className="hover:shadow-xl">
+          <GlobeAltIcon className="h-6 cursor-pointer " />
+        </button>
         <Button
           size="lg"
           className="ml-4 bg-green-600 rounded-md text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 invisible md:visible"
         >
           Udlej sommerhus
         </Button>
-        <button onClick={() => setOpenedLang(true)} className="hover:shadow-xl">
-          <GlobeAltIcon className="h-6 cursor-pointer " />
-        </button>
+
         <div className="">
           {(() => {
             if (user?._id == null) {
