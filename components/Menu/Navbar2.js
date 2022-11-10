@@ -35,11 +35,9 @@ export default function Navbar(props) {
     router.push("/", "/", { locale });
   };
 
-  console.log(user, "dahsd");
-
   return (
     <header
-      className={`sticky top-0 z-50 grid grid-cols-6 bg-white border-b-0 md:border-b-2 xl:border-b-2 border-gray-200 p-4 px-10`}
+      className={` z-50 grid grid-cols-6 bg-white border-b-0 md:border-b-2 xl:border-b-2 border-gray-200 p-4 px-10`}
     >
       <div className="relative items-center col-span-1 h-10 cursor-pointer my-auto hidden md:flex xl:flex">
         <Image src="/logosommerhus.png" width={40} height={40} alt="logo" />

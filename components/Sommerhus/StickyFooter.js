@@ -1,4 +1,5 @@
 import { ShoppingCartIcon } from '@heroicons/react/24/outline'
+import thousandSeperator from 'utils/functions/math/thousandSeperator'
 
 export default function StickyFooter() {
   return (
@@ -16,7 +17,7 @@ export default function StickyFooter() {
                   <ShoppingCartIcon className="h-6 w-6 text-white" aria-hidden="true" />
                 </span>
                 <p className="ml-3 truncate font-medium text-white">
-                  <span className="">Total pris for pr. døgn: 1298</span>
+                  <span className="">Total pris for pr. døgn: {thousandSeperator("1234123")}</span>
                   {/* <span className="hidden md:inline">Big news! We're excited to announce a brand new product.</span> */}
                 </p>
               </div>

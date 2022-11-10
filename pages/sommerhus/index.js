@@ -15,8 +15,9 @@ import Facilities from "components/Sommerhus/Facilities";
 import Description from "components/Sommerhus/Description";
 import Host from "components/Sommerhus/Host"
 
+
 export default function Sommerhus() {
-  //Skift sprog i18n
+  //Skift sprog i18n  
   const router = useRouter();
   const { locale } = router;
   const t =
@@ -45,7 +46,8 @@ export default function Sommerhus() {
           <Facilities />
         </div>
       </div>
-      <StickyFooter />
+  
+    
       <Footer />
     </div>
   );
