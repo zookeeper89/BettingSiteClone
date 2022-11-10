@@ -11,7 +11,6 @@ import { useRouter } from "next/router";
 import Footer from "components/Menu/Footer";
 import TopHero from "components/Hero/TopHero";
 import CityFeatures from "components/SecondaryFeatures/CityFeatures";
-import MapBox from "components/MapBox/MapBox";
 
 
 export default function Home() {
@@ -33,7 +32,6 @@ export default function Home() {
       <TopHero />
 
       <CityFeatures />
-      <MapBox />
 
       <Footer />
     </div>
