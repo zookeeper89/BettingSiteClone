@@ -34,6 +34,8 @@ export function NavbarSearch() {
       city: "",
       date: value,
       guests: 1,
+      price: [0, 5000],
+      
     },
   });
 
