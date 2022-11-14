@@ -30,7 +30,13 @@ export default function Home() {
       </Head>
 
       <Navbar2 />
-      <TopHero />
+      <TopHero
+        overtitle="Saml hele familien til"
+        bottomtitle="en miniferie"
+        span="Få 20% rabat med koden sommer"
+        className="bg-[url('/hero.jpg')] "
+        className2="bg-opacity-50 bg-black pt-10 pb-10 lg:pb-0 lg:pt-0"
+      />
 
       <CityFeatures />
 
