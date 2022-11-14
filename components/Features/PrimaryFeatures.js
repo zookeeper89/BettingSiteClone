@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function PrimaryFeatures(props) {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className=" bg-[url(/landscape.jpg)] bg-cover bg-right mr-10 ml-10 mt-10 rounded-lg overflow-hidden ">
         <div className="bg-gradient-to-r from-[#09C3DB]">
           <div className="p-6 sm:p-14 sm:w-1/2">

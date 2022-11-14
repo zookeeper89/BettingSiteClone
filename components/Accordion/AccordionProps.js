@@ -2,7 +2,7 @@ import { Accordion } from "@mantine/core";
 
 export default function AccordionProps(props) {
   return (
-    <div className="mx-auto max-w-lg px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0  lg:items-center">
+    <div className="text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 className="font-semibold text-3xl py-8">Spørgsmål og svar</h1>
       <Accordion defaultValue="customization">
         <Accordion.Item value="customization">
