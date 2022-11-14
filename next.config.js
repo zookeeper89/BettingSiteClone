@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ['place.dog'],
+  },
   i18n: {
     locales: ["da", "en", "de"],
     // This is the default locale you want to be used when visiting
