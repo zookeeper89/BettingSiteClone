@@ -4,7 +4,7 @@ export default function TopHero(props) {
   return (
     <main>
       <div
-        className={` bg-green-600 bg-cover bg-right sm:bg-right  lg:overflow-hidden ${props.className}`}
+        className={`bg-cover bg-right sm:bg-right  lg:overflow-hidden ${props.className}`}
       >
         <div className={`${props.className2}`}>
           <div className="mx-auto max-w-7xl lg:px-8 ">
