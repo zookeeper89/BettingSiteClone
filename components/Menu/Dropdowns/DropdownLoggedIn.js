@@ -32,7 +32,7 @@ export default function DropdownLoggedIn(props) {
           <Menu.Item onClick={() => setLoginbar(!loginbar)}>Log ind</Menu.Item>
           <Divider />
           <Menu.Item>{user?.email}</Menu.Item>
-          <Menu.Item>Hjælp</Menu.Item>
+          <Menu.Item component="a" href="/udlejer/profil">Dashboard</Menu.Item>
           <Menu.Item onClick={() => signOut()}>Log ud</Menu.Item>
 
           {/* Other items ... */}

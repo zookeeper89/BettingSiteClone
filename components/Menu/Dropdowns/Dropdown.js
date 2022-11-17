@@ -30,7 +30,6 @@ export default function Dropdown(props) {
           
           <Menu.Item onClick={() => setLoginbar(!loginbar)}>Log ind</Menu.Item>
           <Divider />
-          <Menu.Item>Udlej</Menu.Item>
           <Menu.Item>Hjælp</Menu.Item>
 
           {/* Other items ... */}
