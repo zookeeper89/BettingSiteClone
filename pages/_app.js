@@ -1,18 +1,18 @@
-import "styles/globals.css";
-import { SWRConfig } from "swr";
-import { SessionProvider } from "next-auth/react"
+import "../styles/globals.css";
+import { MantineProvider } from "@mantine/core";
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+function MyApp({ Component, pageProps }) {
   return (
-    <SessionProvider session={session}>
-      <SWRConfig
-        value={{
-          fetcher: (...args) => fetch(...args).then((res) => res.json()),
-        }}
-      >
-        <Component {...pageProps} />
-      </SWRConfig>
-    </SessionProvider>
+    <MantineProvider
+      withGlobalStyles
+      withNormalizeCSS
+      theme={{
+        /** Put your mantine theme override here */
+        colorScheme: "light",
+      }}
+    >
+      <Component {...pageProps} />
+    </MantineProvider>
   );
 }
 
