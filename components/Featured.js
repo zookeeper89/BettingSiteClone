@@ -1,149 +1,44 @@
 import React from "react";
 
-export default function Featured() {
-  const games = [
-    {
-      team1: "Real Madrid",
-      team2: "Bercelona",
-      odds1: "1.20",
-      odds2: "1.64",
-      odds3: "2.21",
-    },
-    {
-      team1: "Denmark",
-      team2: "Spain",
-      odds1: "1.65",
-      odds2: "1.64",
-      odds3: "2.11",
-    },
-    {
-      team1: "Real Madrid",
-      team2: "Bercelona",
-      odds1: "1.20",
-      odds2: "1.64",
-      odds3: "2.21",
-    },
-    {
-      team1: "Denmark Fc",
-      team2: "Spain ",
-      odds1: "1.65",
-      odds2: "1.64",
-      odds3: "2.11",
-    },
-    {
-      team1: "FC Dubai",
-      team2: "Portugal",
-      odds1: "1.65",
-      odds2: "1.64",
-      odds3: "2.11",
-    },
-    {
-      team1: "Real Madrid",
-      team2: "Bercelona",
-      odds1: "1.20",
-      odds2: "1.64",
-      odds3: "2.21",
-    },
-    {
-      team1: "Denmark",
-      team2: "Spain",
-      odds1: "1.65",
-      odds2: "1.64",
-      odds3: "2.11",
-    },
-    {
-      team1: "Real Madrid",
-      team2: "Bercelona",
-      odds1: "1.20",
-      odds2: "1.64",
-      odds3: "2.21",
-    },
-    {
-      team1: "Denmark",
-      team2: "Spain",
-      odds1: "1.65",
-      odds2: "1.64",
-      odds3: "2.11",
-    },
-    {
-      team1: "Dubai",
-      team2: "Portugal",
-      odds1: "1.65",
-      odds2: "1.64",
-      odds3: "2.11",
-    },
-    {
-      team1: "Real Madrid",
-      team2: "Bercelona",
-      odds1: "1.20",
-      odds2: "1.64",
-      odds3: "2.21",
-    },
-    {
-      team1: "Denmark",
-      team2: "Spain",
-      odds1: "1.65",
-      odds2: "1.64",
-      odds3: "2.11",
-    },
-    {
-      team1: "Real Madrid",
-      team2: "Bercelona",
-      odds1: "1.20",
-      odds2: "1.64",
-      odds3: "2.21",
-    },
-    {
-      team1: "Denmark",
-      team2: "Spain",
-      odds1: "1.65",
-      odds2: "1.64",
-      odds3: "2.11",
-    },
-    {
-      team1: "Dubai",
-      team2: "Portugal",
-      odds1: "1.65",
-      odds2: "1.64",
-      odds3: "2.11",
-    },
-    {
-      team1: "Real Madrid",
-      team2: "Bercelona",
-      odds1: "1.20",
-      odds2: "1.64",
-      odds3: "2.21",
-    },
-    {
-      team1: "Denmark",
-      team2: "Spain",
-      odds1: "1.65",
-      odds2: "1.64",
-      odds3: "2.11",
-    },
-    {
-      team1: "Real Madrid",
-      team2: "Bercelona",
-      odds1: "1.20",
-      odds2: "1.64",
-      odds3: "2.21",
-    },
-    {
-      team1: "Denmark",
-      team2: "Spain",
-      odds1: "1.65",
-      odds2: "1.64",
-      odds3: "2.11",
-    },
-    {
-      team1: "Dubai",
-      team2: "Portugal",
-      odds1: "1.65",
-      odds2: "1.64",
-      odds3: "2.11",
-    },
-  ];
+const games = [
+  {
+    team1: "Real Madrid",
+    team2: "Bercelona",
+    odds1: "1.20",
+    odds2: "1.64",
+    odds3: "2.21",
+  },
+  {
+    team1: "Denmark",
+    team2: "Spain",
+    odds1: "1.65",
+    odds2: "1.64",
+    odds3: "2.11",
+  },
+  {
+    team1: "Real Madrid",
+    team2: "Bercelona",
+    odds1: "1.20",
+    odds2: "1.64",
+    odds3: "2.21",
+  },
+  {
+    team1: "Denmark Fc",
+    team2: "Spain ",
+    odds1: "1.65",
+    odds2: "1.64",
+    odds3: "2.11",
+  },
+  {
+    team1: "FC Dubai",
+    team2: "Portugal",
+    odds1: "1.65",
+    odds2: "1.64",
+    odds3: "2.11",
+  },
+];
 
+function Featured() {
   return (
     <div className="bg-[#126E51]">
       <div className="grid grid-cols-3">
@@ -172,3 +67,5 @@ export default function Featured() {
     </div>
   );
 }
+
+export default Featured;
